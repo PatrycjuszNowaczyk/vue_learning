@@ -1,0 +1,14 @@
+body{
+    padding: 2rem;
+}
+.is-invalid{
+    outline: 2px solid #f00;
+}
+.is-valid{
+    outline: 2px solid #0f0;
+}
+
+p{
+    margin: 0;
+    min-height: calc(1rem + 2px);
+}

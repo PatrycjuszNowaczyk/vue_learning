@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            <p id="newLine">{{ firstName }} {{ lastName }}</p>
+        <button type="button" @click="addLine">add</button>
+        <hr>
+        <label for="firstName">First name:</label>
+        <input id="firstName" type="text" v-model="firstName" v-on:input="validate">
+        <br>
+        <label for="lastName">Last name:</label>
+        <input id="lastName" type="text" v-model="lastName" @input="validate" @change="validate">
+        </p>
+        <div id="lines">
+            <p v-for="(line, index) in lines" :key="index">{{ line }}</p>
+        </div>
+    </div>
+    <noscript> Youy should allow JavaScript to run on your browser` </noscript>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
