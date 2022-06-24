@@ -10,17 +10,10 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <div class="container">
             <div class="row">
-                <p class="question">
-                    What is your age?
-                </p>
-            </div>
-            <div class="row">
-                <button @click="decrement">-</button>
-                <span class="age">{{age}}</span>
-                <button @click="increment">+</button>
+                <a :href="url" @click.prevent="changeUrl" target="_blank">{{ name }}</a>
             </div>
         </div>
     </div>
