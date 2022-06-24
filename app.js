@@ -1,14 +1,15 @@
 let vm = Vue.createApp({
   data() {
     return {
-      url: "https://www.w3schools.com/",
-      name: "page",
+      age: 18,
     };
   },
   methods: {
-    changeUrl() {
-      this.url = "https://www.google.com/";
-      window.open(this.url, "_blank");
+    increment() {
+      this.age++;
+    },
+    decrement() {
+      this.age--;
     },
   },
 });

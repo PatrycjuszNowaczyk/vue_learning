@@ -13,7 +13,10 @@
     <div id="app" v-cloak>
         <div class="container">
             <div class="row">
-                <a :href="url" @click.prevent="changeUrl" target="_blank">{{ name }}</a>
+                <p>your age is {{ 'type of: ' + typeof age + ' ' + age}}</p>
+                <input class="number" type="number" v-model.number="age">
+                <button @click="decrement">-</button>
+                <button @click="increment">+</button>
             </div>
         </div>
     </div>

@@ -34,8 +34,8 @@ p {
   font-size: 1.2rem;
 }
 .age {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   padding: 0 1rem;
   font-weight: 700;
 }
@@ -49,8 +49,17 @@ button {
   font-size: 1.2rem;
   font-weight: 900;
 }
-button:active{
-    background: slateblue;
+button:active {
+  background: slateblue;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 [v-cloak] {
