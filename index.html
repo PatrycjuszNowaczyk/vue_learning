@@ -11,18 +11,17 @@
 
 <body>
     <div id="app">
-        <p>
-            <p id="newLine">{{ firstName }} {{ lastName }}</p>
-        <button type="button" @click="addLine">add</button>
-        <hr>
-        <label for="firstName">First name:</label>
-        <input id="firstName" type="text" v-model="firstName" v-on:input="validate">
-        <br>
-        <label for="lastName">Last name:</label>
-        <input id="lastName" type="text" v-model="lastName" @input="validate" @change="validate">
-        </p>
-        <div id="lines">
-            <p v-for="(line, index) in lines" :key="index">{{ line }}</p>
+        <div class="container">
+            <div class="row">
+                <p class="question">
+                    What is your age?
+                </p>
+            </div>
+            <div class="row">
+                <button @click="decrement">-</button>
+                <span class="age">{{age}}</span>
+                <button @click="increment">+</button>
+            </div>
         </div>
     </div>
     <noscript> Youy should allow JavaScript to run on your browser` </noscript>
